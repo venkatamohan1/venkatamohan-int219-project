@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A Realistic Virtul Piano</title>
+    <link rel="stylesheet" href="realstic piano.css">
+    <script>
+        var one = new Audio();
+        var two = new Audio(); 
+        var three = new Audio();
+        var four = new Audio();
+        var five = new Audio();
+        var six = new Audio();
+        var seven = new Audio();
+        var eight = new Audio();
+        var nine = new Audio();
+        var ten = new Audio();
+        var eleven = new Audio();
+        var twelve = new Audio();
+        var thirteen = new Audio();
+        var fourteen = new Audio();
+        var blackone = new Audio();
+        var blacktwo = new Audio();
+        var blackthree = new Audio();
+        var blackfour = new Audio();
+        var blackfive = new Audio();
+        var blacksix = new Audio();
+        var blackseven = new Audio();
+        var blackeight = new Audio();
+        var blacknine = new Audio();
+        var blackten = new Audio();
+        
+        one.src = "68448__pinkyfinger__piano-g.wav"
+        two.src = "68439__pinkyfinger__piano-bb.wav"
+        three.src = "68441__pinkyfinger__piano-c.wav"
+        four.src = "68442__pinkyfinger__piano-d.wav"
+        five.src = "68443__pinkyfinger__piano-e.wav"
+        six.src = "68445__pinkyfinger__piano-f.wav"
+        seven.src = "68444__pinkyfinger__piano-eb.wav"
+        eight.src ="piano_C_sharp.mp3"
+        nine.src ="piano_D_sharp.mp3"
+        ten.src ="piano_D.mp3"
+        eleven.src ="piano_E.mp3"
+        twelve.src ="piano_F_sharp.mp3"
+        thirteen.src ="piano_F.mp3"
+        fourteen.src ="piano_G.mp3"
+        blackone.src ="460261__ddmyzik__piano-jingle.wav"
+        blacktwo.src ="29704__herbertboland__pianomood5.wav"
+        blackthree.src ="528004__blakengouda__a-piano-chord.wav"
+        blackfour.src ="39160__jobro__piano-ff-013.wav"
+        blackfive.src ="43743__ls__piano-sounds-2.wav"
+        blacksix.src ="527939__erokia__msfxp8-42-piano-loop-100-bpm.wav"
+        blackseven.src ="64797__casualsamples__pianos-y-teclados-11.wav"
+        blackeight.src ="63391__casualsamples__pianos-y-teclados-12.wav"
+        blacknine.src ="63394__casualsamples__pianos-y-teclados-29.wav"
+        blackten.src ="543742__erokia__low-filtered-arp-msfxp9-187-4-synth-loop-bpm-100.wav"
+    </script>
+</head>
+<body>
+    <div class="top"></div>
+    
+    <div style="margin-left: 65px;">
+        <button class="white" onmousedown="one.play()"></button>
+        <button class="white" onmousedown="two.play()"></button>
+        <button class="white" onmousedown="three.play()"></button>
+        <button class="white" onmousedown="four.play()"></button>
+        <button class="white" onmousedown="five.play()"></button>
+        <button class="white" onmousedown="six.play()"></button>
+        <button class="white" onmousedown="seven.play()"></button>
+        <button class="white" onmousedown="eight.play()"></button>
+        <button class="white" onmousedown="nine.play()"></button>
+        <button class="white" onmousedown="ten.play()"></button>
+        <button class="white" onmousedown="eleven.play()"></button>
+        <button class="white" onmousedown="twelve.play()"></button>
+        <button class="white" onmousedown="thirteen.play()"></button>
+        <button class="white" onmousedown="fourteen.play()"></button>
+
+        <button class="black" onmousedown="blackone.play()"></button>
+        <button class="black2" onmousedown="blacktwo.play()"></button>
+        <button class="black3" onmousedown="blackthree.play()"></button>
+        <button class="black4" onmousedown="blackfour.play()"></button>
+        <button class="black5" onmousedown="blackfive.play()"></button>
+        <button class="black6" onmousedown="blacksix.play()"></button>
+        <button class="black7" onmousedown="blackseven.play()"></button>
+        <button class="black8" onmousedown="blackeight.play()"></button>
+        <button class="black9" onmousedown="blacknine.play()"></button>
+        <button class="black10" onmousedown="blackten.play()"></button>
+        
+        <div class="button">
+            <div align="center">
+            <button id="btnClick"  style="margin-top: 40px"> Change Color </button>
+            </div>
+        </div>
+
+        <script>
+            divsPiano = document.getElementsByClassName("white")
+            document.querySelector("#btnClick").addEventListener('click', function()
+            {
+                for(i=0; i<divsPiano.length; i++){
+                let randomColor = Math.floor(Math.random()*16777215).toString(16);
+                     divsPiano[i].style.backgroundColor = '#'+ randomColor
+                 }
+            })
+        </script>
+        
+</body>
+</html>
